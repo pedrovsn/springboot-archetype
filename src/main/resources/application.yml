@@ -1,0 +1,19 @@
+demo:
+  datasource:
+    url: jdbc:h2:file:~test
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+
+server:
+  servlet:
+    contextPath: /api-demo
+
+spring:
+  logging:
+    level:
+      org.springframework.web: DEBUG
+      org.hibernate: DEBUG
+      com.example.demo: INFO
+    pattern:
+      console: "%d %-5level %logger : %msg%n"
