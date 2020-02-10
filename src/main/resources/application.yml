@@ -1,10 +1,3 @@
-demo:
-  datasource:
-    url: jdbc:h2:mem:testdb
-    username: sa
-    password:
-    driverClassName: org.h2.Driver
-
 server:
   servlet:
     contextPath: /api-demo
@@ -19,3 +12,26 @@ spring:
       com.example.demo: INFO
     pattern:
       console: "%d %-5level %logger : %msg%n"
+
+demo:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  swagger:
+    version: 1.0
+    enabled: true
+    title: "demo-api API"
+    description: "Sample Swagger implementation for the `demo-api` service, leveraging annotations at the controller-method level."
+    basePackage: com.example.demo.controller
+    useDefaultResponseMessages: false
+    enableUrlTemplating: false
+    deepLinking: true
+    defaultModelsExpandDepth: 1
+    defaultModelExpandDepth: 1
+    displayOperationId: false
+    displayRequestDuration: false
+    filter: false
+    maxDisplayedTags: 0
+    showExtensions: false
