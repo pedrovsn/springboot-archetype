@@ -47,7 +47,7 @@ public class DemoController {
 
     @GetMapping("/")
     public ListResponseDTO<DemoResponseDTO> findAllByFilters(@RequestParam("page") int page, @RequestParam("pageSize") int pageSize, @RequestParam("orderBy") String orderBy, @RequestParam("desc") boolean desc) {
-        PageRequestDTO<DemoResponseDTO> pageRequestDTO = new PageRequestDTO<>();
+        PageRequestDTO<DemoRequestDTO> pageRequestDTO = new PageRequestDTO<>();
         pageRequestDTO.setPage(page);
         pageRequestDTO.setPageSize(pageSize);
         pageRequestDTO.setOrderBy(orderBy);

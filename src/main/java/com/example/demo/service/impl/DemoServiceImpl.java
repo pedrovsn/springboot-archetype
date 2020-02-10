@@ -47,7 +47,7 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
-    public ListResponseDTO<DemoResponseDTO> findAll(PageRequestDTO<DemoResponseDTO> filter) {
+    public ListResponseDTO<DemoResponseDTO> findAll(PageRequestDTO<DemoRequestDTO> filter) {
         PageRequest pageRequest = PageRequest.of(filter.getPage(), filter.getPageSize(), Sort.by(Sort.Direction.DESC,
                 filter.getOrderBy()));
         Page<Demo> all = demoRepository.findAll(pageRequest);

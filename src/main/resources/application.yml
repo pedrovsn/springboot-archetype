@@ -3,8 +3,10 @@ server:
     contextPath: /api-demo
 
 spring:
+  profiles:
+    active: default
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    database-platform:
   logging:
     level:
       org.springframework.web: DEBUG
@@ -15,13 +17,13 @@ spring:
 
 demo:
   datasource:
-    url: jdbc:h2:mem:testdb
-    username: sa
+    url:
+    username:
     password:
-    driverClassName: org.h2.Driver
+    driverClassName:
   swagger:
     version: 1.0
-    enabled: true
+    enabled: false
     title: "demo-api API"
     description: "Sample Swagger implementation for the `demo-api` service, leveraging annotations at the controller-method level."
     basePackage: com.example.demo.controller

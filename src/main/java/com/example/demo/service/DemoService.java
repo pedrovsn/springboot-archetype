@@ -10,6 +10,6 @@ public interface DemoService {
     DemoResponseDTO save(DemoRequestDTO demoRequestDTO);
     DemoResponseDTO update(Long id, DemoRequestDTO demoRequestDTO);
     DemoResponseDTO findById(Long id);
-    ListResponseDTO<DemoResponseDTO> findAll(PageRequestDTO<DemoResponseDTO> filter);
+    ListResponseDTO<DemoResponseDTO> findAll(PageRequestDTO<DemoRequestDTO> filter);
     void delete(Long id);
 }
