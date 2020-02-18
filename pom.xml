@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.pedrovsn</groupId>
-	<artifactId>archetype</artifactId>
+	<artifactId>springboot-archetype</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringBootArchetype</name>
-	<description>Starter project to SpringBoot Microservices</description>
+	<description>An archetype which contains a starter SpringBoot Microservice</description>
 	<packaging>maven-archetype</packaging>
 
 	<build>

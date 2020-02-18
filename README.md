@@ -1,23 +1,99 @@
 # springboot-archetype
 
-Minimal Spring Boot sample app.
+An archetype which contains a starter SpringBoot Microservice. More specifically, this archetype creates a project with the following layout:
+
+```
+my-app
+|-- pom.xml
+|-- src
+|   -- main
+|      -- resources
+|         -- messages
+|            -- messages.properties
+|            -- messages-pt_BR.properties
+|         -- application.yml
+|         -- application-local.yml
+|      -- java
+|         -- com
+|            -- yourcompany
+|               -- config
+|                  -- DataSourceConfig.java
+|                  -- RestTemplateConfig.java
+|                  -- SwaggerConfig.java
+|                  -- SwaggerConfigProperties.java
+|               -- controller
+|                  -- DemoController.java
+|                  -- HealthCheckController.java
+|               -- domain
+|                  -- bean
+|                     -- ApiError.java
+|                     -- ListResponseDTO.java
+|                     -- PageRequestDTO.java
+|                  -- dto
+|                     -- DemoRequestDTO.java
+|                     -- DemoResponseDTO.java
+|                  -- enum
+|                  -- orm
+|                     -- Demo.java
+|               -- exception
+|                  -- DemoNotFoundException.java
+|               -- handler
+|                  -- business
+|                     -- DemoExceptionHandler.java
+|                  -- GlobalExceptionHandler.java
+|               -- repository
+|                  -- impl
+|                     -- DemoRepository.java
+|                     -- DemoRepositoryWithSQL.java
+|                  -- DatabaseExternal.java
+|               -- service
+|                  -- impl
+|                     -- DemoServiceImpl.java
+|                  -- DemoService.java
+|               -- DemoApplication.java
+|   -- test
+|      -- resources
+|         -- application.yml
+|      -- java
+|         -- com
+|            -- yourcompany
+|               -- config
+|                  -- ConfigRulesTest.java
+|               -- controller
+|                  -- ControllerRulesTest.java
+|               -- domain
+|                  -- dto
+|                     -- DTORulesTest.java
+|               -- repository
+|                  -- RepositoryRulesTest.java
+|               -- service
+|                  -- impl
+|                     -- DemoServiceImplTest.java
+|                  -- ServiceRulesTest.java
+|               -- DemoApplicationTests.java
+```
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Clone from Github
 
-### Prerequisites
+`$ git clone https://github.com/pedrovsn/springboot-archetype`
 
-For building and running the application you need:
+Then install to your local repo
 
-- JDK 1.8
-- Maven 3
+`mvn install archetype:update-local-catalog`
 
-### Running the application locally
+## Generate Your Project
 
-`mvn spring-boot:run -Dspring.profiles.active=local`
-
-The application will be available on [localhost:8080/api-demo/swagger-ui.html](localhost:8080/api-demo/swagger-ui.html)
+```
+$ mvn archetype:generate 
+-DarchetypeGroupId=com.pedrovsn 
+-DarchetypeArtifactId=archetype 
+-DarchetypeVersion=0.0.1-SNAPSHOT 
+-DgroupId=<your-group-id> 
+-DartifactId=<your-artifcat-id> 
+-Dversion=1.0-SNAPSHOT
+```
 
 ## Copyright
 
