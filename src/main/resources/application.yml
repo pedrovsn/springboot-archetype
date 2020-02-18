@@ -15,7 +15,7 @@ spring:
     pattern:
       console: "%d %-5level %logger : %msg%n"
 
-demo:
+application:
   datasource:
     url:
     username:

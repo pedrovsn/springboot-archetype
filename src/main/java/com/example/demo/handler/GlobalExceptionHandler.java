@@ -14,7 +14,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @ControllerAdvice
-public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler  {
+public class GlobalExceptionHandler extends ResponseEntityExceptionHandler  {
 
     @Override
     protected ResponseEntity<Object> handleMissingServletRequestParameter(

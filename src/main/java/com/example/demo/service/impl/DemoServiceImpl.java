@@ -5,7 +5,7 @@ import com.example.demo.domain.bean.PageRequestDTO;
 import com.example.demo.domain.dto.DemoRequestDTO;
 import com.example.demo.domain.dto.DemoResponseDTO;
 import com.example.demo.domain.orm.Demo;
-import com.example.demo.repository.BaseRepository;
+import com.example.demo.repository.DatabaseExternal;
 import com.example.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,10 +16,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class DemoServiceImpl implements DemoService {
 
-    private BaseRepository<Demo, Long> demoRepository;
+    private DatabaseExternal<Demo, Long> demoRepository;
 
     @Autowired
-    public DemoServiceImpl(BaseRepository<Demo, Long> demoRepository) {
+    public DemoServiceImpl(DatabaseExternal<Demo, Long> demoRepository) {
         this.demoRepository = demoRepository;
     }
 

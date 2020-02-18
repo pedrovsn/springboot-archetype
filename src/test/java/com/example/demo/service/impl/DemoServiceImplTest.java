@@ -5,7 +5,7 @@ import com.example.demo.domain.bean.PageRequestDTO;
 import com.example.demo.domain.dto.DemoRequestDTO;
 import com.example.demo.domain.dto.DemoResponseDTO;
 import com.example.demo.domain.orm.Demo;
-import com.example.demo.repository.BaseRepository;
+import com.example.demo.repository.DatabaseExternal;
 import com.example.demo.service.DemoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -28,7 +28,7 @@ import static org.mockito.Mockito.when;
 public class DemoServiceImplTest {
 
     @Mock
-    BaseRepository<Demo, Long> demoRepository;
+    DatabaseExternal<Demo, Long> demoRepository;
 
     @InjectMocks
     DemoService demoService = new DemoServiceImpl(demoRepository);
