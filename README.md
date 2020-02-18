@@ -27,8 +27,8 @@ my-app
 |               -- domain
 |                  -- bean
 |                     -- ApiError.java
-|                     -- ListResponseDTO.java
-|                     -- PageRequestDTO.java
+|                     -- ListResponse.java
+|                     -- PageRequest.java
 |                  -- dto
 |                     -- DemoRequestDTO.java
 |                     -- DemoResponseDTO.java
