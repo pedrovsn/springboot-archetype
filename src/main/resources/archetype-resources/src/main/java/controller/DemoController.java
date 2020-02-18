@@ -2,8 +2,8 @@ package ${groupId}.${artifactId}.controller;
 
 import ${groupId}.${artifactId}.domain.dto.DemoRequestDTO;
 import ${groupId}.${artifactId}.domain.dto.DemoResponseDTO;
-import ${groupId}.${artifactId}.domain.bean.ListResponseDTO;
-import ${groupId}.${artifactId}.domain.bean.PageRequestDTO;
+import ${groupId}.${artifactId}.domain.bean.ListResponse;
+import ${groupId}.${artifactId}.domain.bean.PageRequest;
 import ${groupId}.${artifactId}.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -46,13 +46,13 @@ public class DemoController {
 
     @GetMapping("/")
     @ResponseStatus(HttpStatus.OK)
-    public ListResponseDTO<DemoResponseDTO> findAllByFilters(@RequestParam("page") int page, @RequestParam("pageSize") int pageSize, @RequestParam("orderBy") String orderBy, @RequestParam("desc") boolean desc) {
-        PageRequestDTO<DemoRequestDTO> pageRequestDTO = new PageRequestDTO<>();
-        pageRequestDTO.setPage(page);
-        pageRequestDTO.setPageSize(pageSize);
-        pageRequestDTO.setOrderBy(orderBy);
-        pageRequestDTO.setDesc(desc);
+    public ListResponse<DemoResponseDTO> findAllByFilters(@RequestParam("page") int page, @RequestParam("pageSize") int pageSize, @RequestParam("orderBy") String orderBy, @RequestParam("desc") boolean desc) {
+        PageRequest<DemoRequestDTO> pageRequest = new PageRequest<>();
+        pageRequest.setPage(page);
+        pageRequest.setPageSize(pageSize);
+        pageRequest.setOrderBy(orderBy);
+        pageRequest.setDesc(desc);
 
-        return demoService.findAll(pageRequestDTO);
+        return demoService.findAll(pageRequest);
     }
 }

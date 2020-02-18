@@ -1,7 +1,7 @@
 package ${groupId}.${artifactId}.service.impl;
 
-import ${groupId}.${artifactId}.domain.bean.ListResponseDTO;
-import ${groupId}.${artifactId}.domain.bean.PageRequestDTO;
+import ${groupId}.${artifactId}.domain.bean.ListResponse;
+import ${groupId}.${artifactId}.domain.bean.PageRequest;
 import ${groupId}.${artifactId}.domain.dto.DemoRequestDTO;
 import ${groupId}.${artifactId}.domain.dto.DemoResponseDTO;
 import ${groupId}.${artifactId}.domain.orm.Demo;
@@ -95,18 +95,18 @@ public class DemoServiceImplTest {
     @DisplayName("Test Mock demoService + demoRepository - Get All")
     @Test
     void testGetAll() {
-        PageRequestDTO<DemoRequestDTO> pageRequestDTO = new PageRequestDTO<>();
-        pageRequestDTO.setPageSize(10);
-        pageRequestDTO.setPage(0);
-        pageRequestDTO.setOrderBy("Id");
-        pageRequestDTO.setDesc(Boolean.TRUE);
+        PageRequest<DemoRequestDTO> pageRequest = new PageRequest<>();
+        pageRequest.setPageSize(10);
+        pageRequest.setPage(0);
+        pageRequest.setOrderBy("Id");
+        pageRequest.setDesc(Boolean.TRUE);
 
         Page<Demo> page = new PageImpl<Demo>(Arrays.asList(demo));
 
         when(demoRepository.findAll(any(PageRequest.class)))
                 .thenReturn(page);
 
-        ListResponseDTO<DemoResponseDTO> items = demoService.findAll(pageRequestDTO);
+        ListResponse<DemoResponseDTO> items = demoService.findAll(pageRequest);
         assertThat(items.getTotalRegister()).isEqualTo(1L);
     }
 }

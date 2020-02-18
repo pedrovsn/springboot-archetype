@@ -1,7 +1,7 @@
 package ${groupId}.${artifactId}.service.impl;
 
-import ${groupId}.${artifactId}.domain.bean.ListResponseDTO;
-import ${groupId}.${artifactId}.domain.bean.PageRequestDTO;
+import ${groupId}.${artifactId}.domain.bean.ListResponse;
+import ${groupId}.${artifactId}.domain.bean.PageRequest;
 import ${groupId}.${artifactId}.domain.dto.DemoRequestDTO;
 import ${groupId}.${artifactId}.domain.dto.DemoResponseDTO;
 import ${groupId}.${artifactId}.domain.orm.Demo;
@@ -45,12 +45,12 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
-    public ListResponseDTO<DemoResponseDTO> findAll(PageRequestDTO<DemoRequestDTO> filter) {
+    public ListResponse<DemoResponseDTO> findAll(PageRequest<DemoRequestDTO> filter) {
         PageRequest pageRequest = PageRequest.of(filter.getPage(), filter.getPageSize(), Sort.by(Sort.Direction.DESC,
                 filter.getOrderBy()));
         Page<Demo> all = demoRepository.findAll(pageRequest);
 
-        ListResponseDTO<DemoResponseDTO> response = new ListResponseDTO<>();
+        ListResponse<DemoResponseDTO> response = new ListResponse<>();
         response.setTotalRegister(all.getTotalElements());
 
         return response;
