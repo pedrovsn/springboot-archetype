@@ -1,6 +1,6 @@
-package com.example.demo.model.dto;
+package com.example.demo.domain.dto;
 
-import com.example.demo.model.Demo;
+import com.example.demo.domain.orm.Demo;
 
 public class DemoRequestDTO {
 

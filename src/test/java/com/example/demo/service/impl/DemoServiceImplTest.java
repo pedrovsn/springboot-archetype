@@ -1,28 +1,23 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.model.Demo;
-import com.example.demo.model.dto.DemoRequestDTO;
-import com.example.demo.model.dto.DemoResponseDTO;
-import com.example.demo.model.dto.ListResponseDTO;
-import com.example.demo.model.dto.PageRequestDTO;
-import com.example.demo.repository.DemoRepository;
+import com.example.demo.domain.bean.ListResponseDTO;
+import com.example.demo.domain.bean.PageRequestDTO;
+import com.example.demo.domain.dto.DemoRequestDTO;
+import com.example.demo.domain.dto.DemoResponseDTO;
+import com.example.demo.domain.orm.Demo;
+import com.example.demo.repository.BaseRepository;
 import com.example.demo.service.DemoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.ArgumentMatchers.any;
@@ -33,7 +28,7 @@ import static org.mockito.Mockito.when;
 public class DemoServiceImplTest {
 
     @Mock
-    DemoRepository demoRepository;
+    BaseRepository<Demo, Long> demoRepository;
 
     @InjectMocks
     DemoService demoService = new DemoServiceImpl(demoRepository);
@@ -70,7 +65,7 @@ public class DemoServiceImplTest {
     @Test
     void testUpdateDemo() {
         when(demoRepository.findById(eq(DEFAULT_ID)))
-                .thenReturn(Optional.of(demo));
+                .thenReturn(demo);
 
         Demo newDemo = new Demo();
         newDemo.setId(DEFAULT_ID);
@@ -91,7 +86,7 @@ public class DemoServiceImplTest {
     @Test
     void testGetOne() {
         when(demoRepository.findById(eq(DEFAULT_ID)))
-                .thenReturn(Optional.of(demo));
+                .thenReturn(demo);
 
         DemoResponseDTO found = demoService.findById(DEFAULT_ID);
         assertThat(found.getId()).isEqualTo(1L);

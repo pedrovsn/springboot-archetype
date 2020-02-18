@@ -1,11 +1,11 @@
 package com.example.demo.service.impl;
 
-import com.example.demo.model.Demo;
-import com.example.demo.model.dto.DemoRequestDTO;
-import com.example.demo.model.dto.DemoResponseDTO;
-import com.example.demo.model.dto.ListResponseDTO;
-import com.example.demo.model.dto.PageRequestDTO;
-import com.example.demo.repository.DemoRepository;
+import com.example.demo.domain.bean.ListResponseDTO;
+import com.example.demo.domain.bean.PageRequestDTO;
+import com.example.demo.domain.dto.DemoRequestDTO;
+import com.example.demo.domain.dto.DemoResponseDTO;
+import com.example.demo.domain.orm.Demo;
+import com.example.demo.repository.BaseRepository;
 import com.example.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -13,15 +13,13 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityNotFoundException;
-
 @Service
 public class DemoServiceImpl implements DemoService {
 
-    private DemoRepository demoRepository;
+    private BaseRepository<Demo, Long> demoRepository;
 
     @Autowired
-    public DemoServiceImpl(DemoRepository demoRepository) {
+    public DemoServiceImpl(BaseRepository<Demo, Long> demoRepository) {
         this.demoRepository = demoRepository;
     }
 
@@ -33,7 +31,7 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public DemoResponseDTO update(Long id, DemoRequestDTO demoRequestDTO) {
-        Demo demo = demoRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+        Demo demo = demoRepository.findById(id);
         demo.setDemo(demoRequestDTO.getDemo());
 
         Demo saved = demoRepository.save(demo);
@@ -42,7 +40,7 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public DemoResponseDTO findById(Long id) {
-        Demo demo = demoRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+        Demo demo = demoRepository.findById(id);
         return DemoResponseDTO.toDTO(demo);
     }
 
@@ -60,7 +58,7 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public void delete(Long id) {
-        demoRepository.findById(id).orElseThrow(EntityNotFoundException::new);
+        demoRepository.findById(id);
         demoRepository.deleteById(id);
     }
 }

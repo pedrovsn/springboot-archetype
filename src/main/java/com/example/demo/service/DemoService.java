@@ -1,9 +1,9 @@
 package com.example.demo.service;
 
-import com.example.demo.model.dto.DemoRequestDTO;
-import com.example.demo.model.dto.DemoResponseDTO;
-import com.example.demo.model.dto.ListResponseDTO;
-import com.example.demo.model.dto.PageRequestDTO;
+import com.example.demo.domain.dto.DemoRequestDTO;
+import com.example.demo.domain.dto.DemoResponseDTO;
+import com.example.demo.domain.bean.ListResponseDTO;
+import com.example.demo.domain.bean.PageRequestDTO;
 
 public interface DemoService {
 

@@ -1,4 +1,4 @@
-package com.example.demo.model.dto;
+package com.example.demo.domain.bean;
 
 public class PageRequestDTO<T extends Object> {
 
