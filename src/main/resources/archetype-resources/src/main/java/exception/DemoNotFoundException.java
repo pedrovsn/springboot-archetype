@@ -1,4 +1,4 @@
-package ${groupId}.${artifactId}.exception;
+package ${package}.exception;
 
 public class DemoNotFoundException extends RuntimeException {
 

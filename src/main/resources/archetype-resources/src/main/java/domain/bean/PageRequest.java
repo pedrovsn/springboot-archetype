@@ -1,4 +1,4 @@
-package ${groupId}.${artifactId}.domain.bean;
+package ${package}.domain.bean;
 
 public class PageRequestDTO<T extends Object> {
 

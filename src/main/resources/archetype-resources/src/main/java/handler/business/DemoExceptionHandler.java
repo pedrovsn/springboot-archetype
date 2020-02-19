@@ -1,7 +1,7 @@
-package ${groupId}.${artifactId}.handler.business;
+package ${package}.handler.business;
 
-import ${groupId}.${artifactId}.domain.bean.ApiError;
-import ${groupId}.${artifactId}.exception.DemoNotFoundException;
+import ${package}.domain.bean.ApiError;
+import ${package}.exception.DemoNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.core.Ordered;

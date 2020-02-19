@@ -1,4 +1,4 @@
-package ${groupId}.${artifactId}.domain.bean;
+package ${package}.domain.bean;
 
 import org.springframework.http.HttpStatus;
 

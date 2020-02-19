@@ -1,4 +1,4 @@
-package ${groupId}.${artifactId}.domain.dto;
+package ${package}.domain.dto;
 
 import com.tngtech.archunit.junit.ArchTest;
 import com.tngtech.archunit.lang.ArchRule;

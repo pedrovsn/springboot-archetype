@@ -1,4 +1,4 @@
-package ${groupId}.${artifactId}.repository;
+package ${package}.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

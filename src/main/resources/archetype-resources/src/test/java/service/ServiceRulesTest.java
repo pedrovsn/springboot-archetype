@@ -1,4 +1,4 @@
-package ${groupId}.${artifactId}.service;
+package ${package}.service;
 
 import com.tngtech.archunit.junit.AnalyzeClasses;
 import com.tngtech.archunit.junit.ArchTest;
@@ -6,7 +6,7 @@ import com.tngtech.archunit.lang.ArchRule;
 
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 
-@AnalyzeClasses(packages = "${groupId}.${artifactId}")
+@AnalyzeClasses(packages = "${package}")
 public class ServiceRulesTest {
 
     @ArchTest
