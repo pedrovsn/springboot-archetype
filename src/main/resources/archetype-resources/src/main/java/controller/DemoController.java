@@ -3,7 +3,7 @@ package ${package}.controller;
 import ${package}.domain.dto.DemoRequestDTO;
 import ${package}.domain.dto.DemoResponseDTO;
 import ${package}.domain.bean.ListResponse;
-import ${package}.domain.bean.PageRequest;
+import ${package}.domain.bean.PagedRequest;
 import ${package}.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -47,12 +47,12 @@ public class DemoController {
     @GetMapping("/")
     @ResponseStatus(HttpStatus.OK)
     public ListResponse<DemoResponseDTO> findAllByFilters(@RequestParam("page") int page, @RequestParam("pageSize") int pageSize, @RequestParam("orderBy") String orderBy, @RequestParam("desc") boolean desc) {
-        PageRequest<DemoRequestDTO> pageRequest = new PageRequest<>();
-        pageRequest.setPage(page);
-        pageRequest.setPageSize(pageSize);
-        pageRequest.setOrderBy(orderBy);
-        pageRequest.setDesc(desc);
+        PagedRequest<DemoRequestDTO> pagedRequest = new PagedRequest<>();
+        pagedRequest.setPage(page);
+        pagedRequest.setPageSize(pageSize);
+        pagedRequest.setOrderBy(orderBy);
+        pagedRequest.setDesc(desc);
 
-        return demoService.findAll(pageRequest);
+        return demoService.findAll(pagedRequest);
     }
 }

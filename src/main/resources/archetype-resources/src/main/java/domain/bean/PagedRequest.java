@@ -1,6 +1,6 @@
 package ${package}.domain.bean;
 
-public class PageRequest<T extends Object> {
+public class PagedRequest<T extends Object> {
 
     private int pageSize;
 

@@ -1,7 +1,7 @@
 package ${package}.service.impl;
 
 import ${package}.domain.bean.ListResponse;
-import ${package}.domain.bean.PageRequest;
+import ${package}.domain.bean.PagedRequest;
 import ${package}.domain.dto.DemoRequestDTO;
 import ${package}.domain.dto.DemoResponseDTO;
 import ${package}.domain.orm.Demo;
@@ -95,18 +95,18 @@ public class DemoServiceImplTest {
     @DisplayName("Test Mock demoService + demoRepository - Get All")
     @Test
     void testGetAll() {
-        PageRequest<DemoRequestDTO> pageRequest = new PageRequest<>();
-        pageRequest.setPageSize(10);
-        pageRequest.setPage(0);
-        pageRequest.setOrderBy("Id");
-        pageRequest.setDesc(Boolean.TRUE);
+        PagedRequest<DemoRequestDTO> pagedRequest = new PagedRequest<>();
+        pagedRequest.setPageSize(10);
+        pagedRequest.setPage(0);
+        pagedRequest.setOrderBy("Id");
+        pagedRequest.setDesc(Boolean.TRUE);
 
         Page<Demo> page = new PageImpl<Demo>(Arrays.asList(demo));
 
         when(demoRepository.findAll(any(PageRequest.class)))
                 .thenReturn(page);
 
-        ListResponse<DemoResponseDTO> items = demoService.findAll(pageRequest);
+        ListResponse<DemoResponseDTO> items = demoService.findAll(pagedRequest);
         assertThat(items.getTotalRegister()).isEqualTo(1L);
     }
 }

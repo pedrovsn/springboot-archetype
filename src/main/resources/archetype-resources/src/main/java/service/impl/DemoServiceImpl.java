@@ -1,7 +1,7 @@
 package ${package}.service.impl;
 
 import ${package}.domain.bean.ListResponse;
-import ${package}.domain.bean.PageRequest;
+import ${package}.domain.bean.PagedRequest;
 import ${package}.domain.dto.DemoRequestDTO;
 import ${package}.domain.dto.DemoResponseDTO;
 import ${package}.domain.orm.Demo;
@@ -45,7 +45,7 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
-    public ListResponse<DemoResponseDTO> findAll(PageRequest<DemoRequestDTO> filter) {
+    public ListResponse<DemoResponseDTO> findAll(PagedRequest<DemoRequestDTO> filter) {
         PageRequest pageRequest = PageRequest.of(filter.getPage(), filter.getPageSize(), Sort.by(Sort.Direction.DESC,
                 filter.getOrderBy()));
         Page<Demo> all = demoRepository.findAll(pageRequest);
