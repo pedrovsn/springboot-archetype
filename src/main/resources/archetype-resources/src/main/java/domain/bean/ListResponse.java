@@ -2,7 +2,7 @@ package ${package}.domain.bean;
 
 import java.util.List;
 
-public class ListResponseDTO<T extends Object> {
+public class ListResponse<T extends Object> {
 
     private long totalRegister;
 

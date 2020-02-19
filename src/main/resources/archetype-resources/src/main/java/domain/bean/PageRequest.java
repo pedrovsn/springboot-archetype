@@ -1,6 +1,6 @@
 package ${package}.domain.bean;
 
-public class PageRequestDTO<T extends Object> {
+public class PageRequest<T extends Object> {
 
     private int pageSize;
 
