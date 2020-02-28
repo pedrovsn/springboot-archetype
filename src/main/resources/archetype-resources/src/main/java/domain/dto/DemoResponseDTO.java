@@ -1,6 +1,6 @@
-package ${package}.domain.dto;
+package ${groupId}.domain.dto;
 
-import ${package}.domain.orm.Demo;
+import ${groupId}.domain.orm.Demo;
 
 public class DemoResponseDTO {
 

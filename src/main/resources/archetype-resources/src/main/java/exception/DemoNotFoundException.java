@@ -1,4 +1,4 @@
-package ${package}.exception;
+package ${groupId}.exception;
 
 public class DemoNotFoundException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package ${package}.domain.bean;
+package ${groupId}.domain.bean;
 
 import org.springframework.http.HttpStatus;
 

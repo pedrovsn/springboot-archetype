@@ -1,10 +1,10 @@
-package ${package}.controller;
+package ${groupId}.controller;
 
-import ${package}.domain.dto.DemoRequestDTO;
-import ${package}.domain.dto.DemoResponseDTO;
-import ${package}.domain.bean.ListResponse;
-import ${package}.domain.bean.PagedRequest;
-import ${package}.service.DemoService;
+import ${groupId}.domain.dto.DemoRequestDTO;
+import ${groupId}.domain.dto.DemoResponseDTO;
+import ${groupId}.domain.bean.ListResponse;
+import ${groupId}.domain.bean.PagedRequest;
+import ${groupId}.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
