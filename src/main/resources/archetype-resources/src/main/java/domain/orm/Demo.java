@@ -1,4 +1,4 @@
-package ${groupId}.domain.orm;
+package ${package}.domain.orm;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

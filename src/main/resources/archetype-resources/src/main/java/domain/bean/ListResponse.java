@@ -1,4 +1,4 @@
-package ${groupId}.domain.bean;
+package ${package}.domain.bean;
 
 import java.util.List;
 

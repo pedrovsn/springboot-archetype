@@ -1,4 +1,4 @@
-package ${groupId}.controller;
+package ${package}.controller;
 
 import com.google.common.collect.ImmutableMap;
 import org.springframework.http.HttpStatus;

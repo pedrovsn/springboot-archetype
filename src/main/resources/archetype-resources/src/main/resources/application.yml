@@ -1,6 +1,6 @@
 server:
   servlet:
-    contextPath: /api-demo
+    contextPath: /api-${artifactId}
 
 spring:
   profiles:
@@ -24,9 +24,9 @@ application:
   swagger:
     version: 1.0
     enabled: false
-    title: "demo-api API"
+    title: ${artifactId} API
     description: "Sample Swagger implementation for the `demo-api` service, leveraging annotations at the controller-method level."
-    basePackage: com.example.demo.controller
+    basePackage: ${package}.controller
     useDefaultResponseMessages: false
     enableUrlTemplating: false
     deepLinking: true

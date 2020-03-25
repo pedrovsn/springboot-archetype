@@ -1,8 +1,8 @@
-package ${groupId}.repository.impl;
+package ${package}.repository.impl;
 
-import ${groupId}.domain.orm.Demo;
-import ${groupId}.exception.DemoNotFoundException;
-import ${groupId}.repository.DatabaseExternal;
+import ${package}.domain.orm.Demo;
+import ${package}.exception.DemoNotFoundException;
+import ${package}.repository.DatabaseExternal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

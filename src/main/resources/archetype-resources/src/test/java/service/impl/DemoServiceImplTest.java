@@ -1,12 +1,12 @@
-package ${groupId}.service.impl;
+package ${package}.service.impl;
 
-import ${groupId}.domain.bean.ListResponse;
-import ${groupId}.domain.bean.PagedRequest;
-import ${groupId}.domain.dto.DemoRequestDTO;
-import ${groupId}.domain.dto.DemoResponseDTO;
-import ${groupId}.domain.orm.Demo;
-import ${groupId}.repository.DatabaseExternal;
-import ${groupId}.service.DemoService;
+import ${package}.domain.bean.ListResponse;
+import ${package}.domain.bean.PagedRequest;
+import ${package}.domain.dto.DemoRequestDTO;
+import ${package}.domain.dto.DemoResponseDTO;
+import ${package}.domain.orm.Demo;
+import ${package}.repository.DatabaseExternal;
+import ${package}.service.DemoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

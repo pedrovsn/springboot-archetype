@@ -1,9 +1,9 @@
-package ${groupId}.service;
+package ${package}.service;
 
-import ${groupId}.domain.dto.DemoRequestDTO;
-import ${groupId}.domain.dto.DemoResponseDTO;
-import ${groupId}.domain.bean.ListResponse;
-import ${groupId}.domain.bean.PagedRequest;
+import ${package}.domain.dto.DemoRequestDTO;
+import ${package}.domain.dto.DemoResponseDTO;
+import ${package}.domain.bean.ListResponse;
+import ${package}.domain.bean.PagedRequest;
 
 public interface DemoService {
 

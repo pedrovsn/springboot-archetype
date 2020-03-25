@@ -1,4 +1,4 @@
-package ${groupId}.domain.bean;
+package ${package}.domain.bean;
 
 public class PagedRequest<T extends Object> {
 

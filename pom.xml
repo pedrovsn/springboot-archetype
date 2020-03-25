@@ -5,7 +5,7 @@
 
 	<groupId>com.pedrovsn</groupId>
 	<artifactId>springboot-archetype</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>SpringBootArchetype</name>
 	<description>An archetype which contains a starter SpringBoot Microservice</description>
 	<packaging>maven-archetype</packaging>

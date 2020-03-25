@@ -1,6 +1,6 @@
-package ${groupId}.repository.impl;
+package ${package}.repository.impl;
 
-import ${groupId}.domain.orm.Demo;
+import ${package}.domain.orm.Demo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;

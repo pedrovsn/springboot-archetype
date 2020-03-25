@@ -1,6 +1,6 @@
-package ${groupId}.handler;
+package ${package}.handler;
 
-import ${groupId}.domain.bean.ApiError;
+import ${package}.domain.bean.ApiError;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
