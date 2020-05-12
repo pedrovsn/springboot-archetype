@@ -89,7 +89,7 @@ Then install to your local repo
 $ mvn archetype:generate 
 -DarchetypeGroupId=com.pedrovsn 
 -DarchetypeArtifactId=springboot-archetype 
--DarchetypeVersion=0.0.1-SNAPSHOT 
+-DarchetypeVersion=0.0.2-SNAPSHOT 
 -DgroupId=<your-group-id> 
 -DartifactId=<your-artifcat-id> 
 -Dversion=1.0-SNAPSHOT
